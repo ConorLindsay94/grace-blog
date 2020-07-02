@@ -13,7 +13,6 @@ exports.createPages = ({ graphql, actions }) => {
             allContentfulBlogPost {
               edges {
                 node {
-                  title
                   slug
                 }
               }
