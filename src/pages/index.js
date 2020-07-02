@@ -68,7 +68,6 @@ export const pageQuery = graphql`
           shortBio {
             shortBio
           }
-          title
           heroImage: image {
             fluid(
               maxWidth: 1180
