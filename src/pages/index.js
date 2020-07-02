@@ -1,25 +1,27 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import { Helmet } from 'react-helmet'
-import Hero from '../components/hero'
-import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
+import React from "react";
+import { graphql } from "gatsby";
+import get from "lodash/get";
+import { Helmet } from "react-helmet";
+import Hero from "../components/hero";
+import Layout from "../components/layout";
+import ArticlePreview from "../components/article-preview";
+import { homeStyles } from "../styles/home";
 
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const siteTitle = get(this, "props.data.site.siteMetadata.title");
+    const posts = get(this, "props.data.allContentfulBlogPost.edges");
+    const [author] = get(this, "props.data.allContentfulPerson.edges");
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+        <Helmet title={siteTitle} />
+        <Hero data={author.node} />
+        <div css={homeStyles.container}>
+            <h2 className="section-headline">Recent blog posts</h2>
+            <ul css={homeStyles.articleList}>
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
@@ -29,13 +31,12 @@ class RootIndex extends React.Component {
               })}
             </ul>
           </div>
-        </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default RootIndex
+export default RootIndex;
 
 export const pageQuery = graphql`
   query HomeQuery {
@@ -82,4 +83,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

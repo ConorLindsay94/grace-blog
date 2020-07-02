@@ -1,15 +1,16 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import { Link } from 'gatsby'
-import styles from './navigation.module.css'
+import { navStyles } from '../styles/navigation'
 
 export default () => (
-  <nav role="navigation">
-    <ul className={styles.navigation}>
-      <li className={styles.navigationItem}>
-        <Link to="/">Home</Link>
+  <nav css={navStyles.container} role="navigation">
+    <ul css={navStyles.list}>
+      <li>
+        <Link css={navStyles.link} to="/">Home</Link>
       </li>
-      <li className={styles.navigationItem}>
-        <Link to="/blog/">Blog</Link>
+      <li>
+        <Link css={navStyles.link} to="/blog/">Blog</Link>
       </li>
     </ul>
   </nav>

@@ -37,5 +37,20 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    {
+      resolve: "gatsby-plugin-prefetch-google-fonts",
+      options: {
+        fonts: [
+          {
+            family: "Cabin",
+            variants: [`400`, `700`],
+          },
+          {
+            family: "Open Sans",
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
   ],
 };
