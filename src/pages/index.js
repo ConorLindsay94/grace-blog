@@ -71,7 +71,6 @@ export const pageQuery = graphql`
           }
           heroImage: image {
             fluid(
-              maxWidth: 1180
               maxHeight: 480
               resizingBehavior: PAD
               background: "rgb:000000"

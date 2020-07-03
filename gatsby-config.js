@@ -37,6 +37,7 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    'gatsby-plugin-svg-sprite',
     {
       resolve: "gatsby-plugin-prefetch-google-fonts",
       options: {

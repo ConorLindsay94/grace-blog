@@ -10,6 +10,7 @@ export const globalStyles = {
     fontFamily: "Cabin"
   },
   "a": {
+    fontFamily: "Cabin",
     textDecoration: "none",
     color: "black",
   }
