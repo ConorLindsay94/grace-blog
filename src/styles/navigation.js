@@ -1,8 +1,27 @@
+import { mq } from "./breakpoints";
+
 export const navStyles = {
   container: {
-    width: "200px",
     display: "flex",
+    width: "200px",
     alignItems: "center",
+    justifyContent: "flex-end",
+    [mq[1]]: {
+      justifyContent: "flex-start",
+    },
+  },
+  menuIcon: {
+    height: "50px",
+    width: "50px",
+    [mq[1]]: {
+      display: "none",
+    },
+  },
+  nav: {
+    display: "none",
+    [mq[1]]: {
+      display: "block",
+    },
   },
   icon: {
     height: "15px",

@@ -15,7 +15,7 @@ export const layoutStyles = {
     margin: "0 auto",
     paddingLeft: "16px",
     paddingRight: "16px",
-    [mq[4]]: {
+    [mq[3]]: {
       paddingLeft: 0,
       paddingRight: 0
     },
