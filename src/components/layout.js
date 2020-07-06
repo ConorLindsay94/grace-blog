@@ -6,7 +6,6 @@ import Container from "./container";
 import Navigation from "./navigation";
 import { globalStyles } from "../styles/global";
 import { layoutStyles } from "../styles/layout";
-import logo from "../../static/logo.png";
 
 class Template extends React.Component {
   render() {
