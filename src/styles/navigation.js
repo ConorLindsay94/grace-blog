@@ -1,6 +1,6 @@
 export const navStyles = {
   container: {
-    width: "20%",
+    width: "200px",
     display: "flex",
     alignItems: "center",
   },
@@ -19,7 +19,7 @@ export const navStyles = {
   list: {
     listStyle: "none",
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     width: "100%",
     "& li": {
       display: "inline-block",
