@@ -15,6 +15,8 @@ class RootIndex extends React.Component {
     const posts = get(this, "props.data.allContentfulBlogPost.edges");
     const [author] = get(this, "props.data.allContentfulPerson.edges");
 
+    const recentPosts = posts.slice(0, 3);
+
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
@@ -22,7 +24,7 @@ class RootIndex extends React.Component {
         <div css={homeStyles.container}>
             <h2 className="section-headline">Recent blog posts</h2>
             <ul css={homeStyles.articleList}>
-              {posts.map(({ node }) => {
+              {recentPosts.map(({ node }) => {
                 return (
                   <ArticlePreview article={node} />
                 )
