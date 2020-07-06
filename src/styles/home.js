@@ -1,14 +1,20 @@
+import { mq } from "./breakpoints";
+
 export const homeStyles = {
   container: {
     maxWidth: "1200px",
     margin: "0 auto",
+    padding: "0px 16px",
   },
   articleList: {
     margin: 0,
     padding: 0,
     listStyle: "none",
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-    gridGap: "5vmin",
+    display: "flex",
+    flexDirection: "column",
+    [mq[1]]: {
+      flexDirection: "row",
+      justifyContent: "space-between"
+    }
   }
 }

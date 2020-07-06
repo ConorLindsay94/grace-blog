@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Link } from "gatsby";
-import React from "react";
 import { navStyles } from "../styles/navigation";
 import homeIcon from "../assets/svg/home.svg";
 import blogIcon from "../assets/svg/edit-3.svg";

@@ -1,18 +1,22 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
+import { articlePreviewStyles } from "../styles/article-preview";
 
 export default ({ article }) => (
-  <div>
-    <Img alt="" fluid={article.heroImage.fluid} />
-    <h3>
-      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-    </h3>
+  <li css={articlePreviewStyles.article}>
+    <Link to={`/blog/${article.slug}`}>
+      <Img alt="" fluid={article.heroImage.fluid} />
+      <h3>
+        <span to={`/blog/${article.slug}`}>{article.title}</span>
+      </h3>
+    </Link>
     <small>{article.publishDate}</small>
     <p
       dangerouslySetInnerHTML={{
         __html: article.description.childMarkdownRemark.html,
       }}
     />
-  </div>
-)
+  </li>
+);

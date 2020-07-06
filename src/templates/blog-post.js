@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
@@ -6,6 +8,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
 import heroStyles from '../components/hero.module.css'
+import { blogStyles } from "../styles/blog";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -23,7 +26,7 @@ class BlogPostTemplate extends React.Component {
               fluid={post.heroImage.fluid}
             />
           </div>
-          <div className="wrapper">
+          <div css={blogStyles.container}>
             <h1 className="section-headline">{post.title}</h1>
             <p
               style={{

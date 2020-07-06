@@ -6,6 +6,7 @@ import Container from "./container";
 import Navigation from "./navigation";
 import { globalStyles } from "../styles/global";
 import { layoutStyles } from "../styles/layout";
+import { Link } from "gatsby";
 
 class Template extends React.Component {
   render() {
@@ -18,9 +19,9 @@ class Template extends React.Component {
           <div css={layoutStyles.header}>
             <div css={layoutStyles.container}>
               <div css={layoutStyles.logoContainer}>
-                <div css={layoutStyles.logo}>
+                <Link to="/" css={layoutStyles.logo}>
                   <span>GL</span>
-                </div>
+                </Link>
               </div>
               <Navigation />
             </div>
