@@ -17,7 +17,7 @@ export const blogStyles = {
     },
     [mq[1]]: {
       padding: "16px 32px",
-      position: "absolute",
+      position: "relative",
       left: 0,
       right: 0,
       top: "-120px",

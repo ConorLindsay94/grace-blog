@@ -34,5 +34,12 @@ export const layoutStyles = {
   logoContainer: {
     display: "flex",
     alignItems: "center"
+  },
+  footer: {
+    borderTop: "10px solid #AEADF0",
+    padding: "32px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   }
 }

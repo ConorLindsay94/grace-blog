@@ -4,7 +4,7 @@ export const homeStyles = {
   container: {
     maxWidth: "1200px",
     margin: "0 auto",
-    padding: "0px 16px",
+    padding: "32px",
   },
   articleList: {
     margin: 0,
