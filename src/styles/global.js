@@ -6,6 +6,9 @@ export const globalStyles = {
     lineHeight: 1.65,
     margin: 0,
   },
+  "h1": {
+    fontSize: "40px"
+  },
   "h1, h2, h3": {
     fontFamily: "Cabin"
   },
