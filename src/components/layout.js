@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import React, { useState } from "react";
-import { Global } from "@emotion/core";
+import { jsx, Global } from "@emotion/core";
+import React, { useState, useRef, useEffect } from "react";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import Container from "./container";
 import Navigation from "./navigation";
 import Socials from "./socials";
@@ -11,17 +11,34 @@ import { Link, navigate } from "gatsby";
 
 const Template = ({ children }) => {
   const [menuActive, setMenuActive] = useState(false);
+  const targetElement = useRef(null);
 
   const goTo = (path) => {
     setMenuActive(false);
     navigate(path);
   }
 
+  const toggleMenu = (val) => {
+    setMenuActive(val);
+    if (val) {
+      disableBodyScroll(targetElement);
+    } else {
+      enableBodyScroll(targetElement);
+    }
+  }
+
+  useEffect(() => {
+    return () => {
+      clearAllBodyScrollLocks();
+    }
+  }, []);
+
   return (
     <>
       <Global styles={globalStyles} />
       <Container>
         <div
+          ref={targetElement}
           css={[
             globalStyles.mobileMenu,
             menuActive ? globalStyles.mobileMenuActive : {},
@@ -43,7 +60,7 @@ const Template = ({ children }) => {
                 GL
               </Link>
             </div>
-            <Navigation menuActive={menuActive} setMenuActive={setMenuActive} />
+            <Navigation menuActive={menuActive} setMenuActive={toggleMenu} />
           </div>
         </header>
         <main>{children}</main>
