@@ -23,12 +23,6 @@ export const navStyles = {
       display: "block",
     },
   },
-  icon: {
-    height: "15px",
-    width: "15px",
-    fill: "black",
-    marginRight: "8px"
-  },
   link: {
     color: "black",
     textDecoration: "none",

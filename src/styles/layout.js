@@ -24,7 +24,6 @@ export const layoutStyles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: "10%",
     fontSize: "32px",
     color: "white",
     height: "75px",

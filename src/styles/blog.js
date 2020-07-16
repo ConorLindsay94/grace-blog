@@ -1,11 +1,18 @@
 import { mq } from "../styles/breakpoints";
 
 export const blogStyles = {
+  articleHeader: {
+    paddingBottom: "13px",
+    borderBottom: "2px solid #AEADF0",
+    "& p": {
+      margin: 0,
+    }
+  },
   container: {
     position: "relative",
   },
   body: {
-    fontSize: "18px"
+    fontSize: "18px",
   },
   innerContainer: {
     maxWidth: "720px",
@@ -20,7 +27,11 @@ export const blogStyles = {
       position: "relative",
       left: 0,
       right: 0,
-      top: "-120px",
+      top: "-150px",
     },
+  },
+  meta: {
+    display: "flex",
+    alignItems: "center",
   }
 }

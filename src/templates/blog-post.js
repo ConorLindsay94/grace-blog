@@ -6,9 +6,12 @@ import { Helmet } from "react-helmet";
 import get from "lodash/get";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
+import calendarIcon from "../assets/svg/calendar.svg";
+import bookIcon from "../assets/svg/book-open.svg";
 
 import heroStyles from "../components/hero.module.css";
 import { blogStyles } from "../styles/blog";
+import { globalStyles } from "../styles/global";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -28,8 +31,21 @@ class BlogPostTemplate extends React.Component {
           </div>
           <div css={blogStyles.container}>
             <div css={blogStyles.innerContainer}>
-              <h1 className="section-headline">{post.title}</h1>
-              <p>{post.publishDate}</p>
+              <div css={blogStyles.articleHeader}>
+                <h1 className="section-headline">{post.title}</h1>
+                <p css={blogStyles.meta}>
+                  <svg css={globalStyles.icon}>
+                    <use xlinkHref={`#${calendarIcon.id}`} />
+                  </svg>
+                  {post.publishDate}
+                </p>
+                <p css={blogStyles.meta}>
+                  <svg css={globalStyles.icon}>
+                    <use xlinkHref={`#${bookIcon.id}`} />
+                  </svg>
+                  {post.articleLength} minute read
+                </p>
+              </div>
               <div
                 css={blogStyles.body}
                 dangerouslySetInnerHTML={{
@@ -50,6 +66,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
+      articleLength
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {

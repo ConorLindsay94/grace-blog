@@ -16,5 +16,8 @@ export const homeStyles = {
       flexDirection: "row",
       justifyContent: "space-between"
     }
+  },
+  recentPostsHeader: {
+    fontSize: "32px"
   }
 }

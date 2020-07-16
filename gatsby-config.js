@@ -43,8 +43,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: "Cabin",
-            variants: [`400`, `700`],
+            family: "Abril Fatface",
+            variants: [`100`, `200`, `300`, `400`, `700`],
           },
           {
             family: "Open Sans",
