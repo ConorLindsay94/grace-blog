@@ -13,7 +13,7 @@ export default ({ article }) => (
       </h3>
     </Link>
     <small>{article.publishDate}</small>
-    <p
+    <div
       dangerouslySetInnerHTML={{
         __html: article.description.childMarkdownRemark.html,
       }}
