@@ -17,6 +17,8 @@ class RootIndex extends React.Component {
 
     const recentPosts = posts.slice(0, 3);
 
+    console.log(siteTitle)
+
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
@@ -40,6 +42,11 @@ export default RootIndex;
 
 export const pageQuery = graphql`
   query HomeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {

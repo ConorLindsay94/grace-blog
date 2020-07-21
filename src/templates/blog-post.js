@@ -20,8 +20,8 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        <Helmet title={`${post.title} | ${siteTitle}`} />
         <div style={{ background: "#fff" }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={heroStyles.hero}>
             <Img
               className={heroStyles.heroImage}
@@ -64,6 +64,11 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       articleLength

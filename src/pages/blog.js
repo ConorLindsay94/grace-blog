@@ -19,8 +19,6 @@ class BlogIndex extends React.Component {
     const posts = get(this, "props.data.allContentfulBlogPost.edges");
     const blogHero = get(this, "props.data.contentfulAsset");
 
-    console.log(blogHero);
-
     return (
       <Layout location={this.props.location}>
         <div style={{ background: "#fff" }}>
@@ -73,6 +71,11 @@ export default BlogIndex;
 
 export const pageQuery = graphql`
   query BlogQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
