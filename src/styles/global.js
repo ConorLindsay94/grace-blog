@@ -28,6 +28,9 @@ export const globalStyles = {
     fill: "black",
     marginRight: "8px",
   },
+  main: {
+    minHeight: "calc(100vh - 110px)",
+  },
   mobileMenu: {
     position: "absolute",
     width: "100%",

@@ -38,7 +38,6 @@ export const blogStyles = {
 
 export const blogListStyles = {
   container: {
-    minHeight: "calc(100vh - 110px)",
     maxWidth: 768,
     margin: "0 auto",
     padding: "16px",

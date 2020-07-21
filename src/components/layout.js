@@ -63,7 +63,7 @@ const Template = ({ children }) => {
             <Navigation menuActive={menuActive} setMenuActive={toggleMenu} />
           </div>
         </header>
-        <main>{children}</main>
+        <main css={globalStyles.main}>{children}</main>
         <footer css={layoutStyles.footer}>
           Grace Lindsay | <Socials />
         </footer>
