@@ -10,7 +10,7 @@ export const layoutStyles = {
   container: {
     display: "flex",
     justifyContent: "space-between",
-    maxWidth: "1200px",
+    maxWidth: "768px",
     width: "100%",
     margin: "0 auto",
     paddingLeft: "16px",

@@ -1,4 +1,8 @@
 export const globalStyles = {
+  hero: {
+    height: "61.8vh",
+    maxHeight: "400px",
+  },
   body: {
     backgroundColor: "white",
     fontFamily: "Open Sans",
@@ -30,7 +34,7 @@ export const globalStyles = {
     height: 0,
     backgroundColor: "#AEADF0",
     top: "110px",
-    zIndex: "10",
+    zIndex: "20",
     transition: "height .2s ease",
     overflow: "hidden",
     "& ul": {

@@ -35,3 +35,36 @@ export const blogStyles = {
     alignItems: "center",
   }
 }
+
+export const blogListStyles = {
+  container: {
+    minHeight: "calc(100vh - 110px)",
+    maxWidth: 768,
+    margin: "0 auto",
+    padding: "16px",
+  },
+  hero: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "61.8vh",
+    maxHeight: "400px",
+    overflow: "hidden",
+  },
+  blogPost: {
+    padding: "16px 0px",
+    "& h2": {
+      margin: 0
+    },
+    "& small": {
+      display: "block"
+    },
+    "& p": {
+      margin: 0
+    }
+  },
+  meta: {
+    display: "flex !important",
+    alignItems: "center",
+  }
+}

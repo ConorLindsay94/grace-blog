@@ -2,9 +2,9 @@ import { mq } from "./breakpoints";
 
 export const homeStyles = {
   container: {
-    maxWidth: "1200px",
+    maxWidth: "768px",
     margin: "0 auto",
-    padding: "32px",
+    padding: "16px",
   },
   articleList: {
     margin: 0,
@@ -18,6 +18,8 @@ export const homeStyles = {
     }
   },
   recentPostsHeader: {
-    fontSize: "32px"
+    fontSize: "32px",
+    margin: 0,
+    marginBottom: "16px",
   }
 }
