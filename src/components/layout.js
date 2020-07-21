@@ -33,6 +33,12 @@ const Template = ({ children }) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (!menuActive) {
+      enableBodyScroll(targetElement);
+    }
+  }, [menuActive]);
+
   return (
     <>
       <Global styles={globalStyles} />

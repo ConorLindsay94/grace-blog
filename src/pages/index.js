@@ -17,8 +17,6 @@ class RootIndex extends React.Component {
 
     const recentPosts = posts.slice(0, 3);
 
-    console.log(siteTitle)
-
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
